@@ -12,8 +12,16 @@ import eBaseImpl
 enigma.eTimer = eBaseImpl.eTimer
 enigma.eSocketNotifier = eBaseImpl.eSocketNotifier
 enigma.eConsoleAppContainer = eConsoleImpl.eConsoleAppContainer
+from Components.config import config, configfile, ConfigText, ConfigYesNo, ConfigInteger, ConfigSelection, NoSave
 
 from traceback import print_exc
+
+# New Plugin Style
+config.misc.plugin_style = ConfigSelection(default='newstyle3', choices=[
+	('normallstyle', _('Normall Style')),
+	('newstyle1', _('New Style 1')),
+	('newstyle2', _('New Style 2')),
+	('newstyle3', _('New Style 3'))])
 
 profile("SetupDevices")
 import Components.SetupDevices
@@ -30,7 +38,6 @@ from Screens.SimpleSummary import SimpleSummary
 from sys import stdout
 
 profile("Bouquets")
-from Components.config import config, configfile, ConfigText, ConfigYesNo, ConfigInteger, NoSave
 config.misc.load_unlinked_userbouquets = ConfigYesNo(default=True)
 
 
@@ -67,7 +74,7 @@ config.misc.prev_wakeup_time = ConfigInteger(default=0)
 #config.misc.prev_wakeup_time_type is only valid when wakeup_time is not 0
 config.misc.prev_wakeup_time_type = ConfigInteger(default=0)
 # 0 = RecordTimer, 1 = ZapTimer, 2 = Plugins, 3 = WakeupTimer
-config.misc.epgcache_filename = ConfigText(default="/media/hdd/epg.dat", fixed_size=False)
+config.misc.epgcache_filename = ConfigText(default="/hdd/epg.dat", fixed_size=False)
 
 
 def setEPGCachePath(configElement):
