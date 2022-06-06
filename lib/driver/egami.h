@@ -9,7 +9,7 @@ class eEGAMI
 public:
 	eEGAMI();
 	static eEGAMI *getInstance();
-	void checkkernel(int m);						//1=True 0=False
+	void checkkernel();						//1=True 0=False
 };
 
 #endif
