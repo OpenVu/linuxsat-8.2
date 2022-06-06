@@ -20,7 +20,7 @@ void eEGAMI::checkkernel()
 {
   int kernel = 1234;
   int check = 1234;
-  int m = 0;	
+  int m;	
   
   if(check == kernel)
   {
