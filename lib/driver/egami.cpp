@@ -16,11 +16,11 @@ eEGAMI::eEGAMI()
   instance = this;
 }
 
-void eEGAMI::checkkernel(int m)
+void eEGAMI::checkkernel()
 {
   int kernel = 1234;
   int check = 1234;
-  m = 0;	
+  int m = 0;	
   
   if(check == kernel)
   {
