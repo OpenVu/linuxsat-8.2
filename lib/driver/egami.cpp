@@ -13,8 +13,14 @@ eEGAMI *eEGAMI::instance = 0;
 
 eEGAMI::eEGAMI()
 {
+  ASSERT(!instance);	
   instance = this;
 }
+
+eEGAMI *eEGAMI::getInstance()
+{
+	return instance;
+}	
 
 int eEGAMI::checkkernel()
 {
@@ -33,9 +39,3 @@ int eEGAMI::checkkernel()
 	}		
 	return mycheck;
 }
-	
-eEGAMI *eEGAMI::getInstance()
-{
-	return instance;
-}	
-  
