@@ -21,7 +21,7 @@ int eEGAMI::checkkernel()
 	int mycheck = 0;
 
 	int fd = open("/proc/stb/info/vumodel", O_WRONLY);
-	if (fd == "vusolo2")
+	if (strcmp(fd == "vusolo2"))
 	{
 		mycheck = 1;
 	}
