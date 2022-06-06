@@ -31,7 +31,25 @@ void eEGAMI::checkkernel()
     m = 0;
   }
   return;	
-}	
+}
+
+
+int eEGAMI::checkkernel()
+{
+	int mycheck = 0;
+	//if (state == kernel)
+		//return 0;
+	int fd = open("/proc/stb/info/vumodel", O_WRONLY);
+	if (fd == vusolo2)
+	{
+		mycheck = 1;
+	}
+	else
+	{
+		mycheck = 0;
+	}		
+	return 0;
+}
 	
 eEGAMI *eEGAMI::getInstance()
 {
