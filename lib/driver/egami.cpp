@@ -19,9 +19,10 @@ eEGAMI::eEGAMI()
 int eEGAMI::checkkernel()
 {
 	int mycheck = 0;
+	string box = "vusolo2";
 
 	int fd = open("/proc/stb/info/vumodel", O_WRONLY);
-	if (strcmp(fd == "vusolo2"))
+	if (fd == box)
 	{
 		mycheck = 1;
 	}
