@@ -22,7 +22,7 @@ int eEGAMI::checkkernel()
 	string box = "vusolo2";
 
 	fd = open("/proc/stb/info/vumodel", O_WRONLY);
-	if (fd == box)
+	if (fd == "vusolo2")
 	{
 		mycheck = 1;
 	}
