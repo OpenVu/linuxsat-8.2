@@ -22,9 +22,9 @@ eEGAMI *eEGAMI::getInstance()
 	return instance;
 }	
 
-void eEGAMI::checkkernel()
+void eEGAMI::checkkernel(int mycheck)
 {
-	int mycheck;
+	//int mycheck;
 	int kernel = 1234;
 	int test = 1234;
 
