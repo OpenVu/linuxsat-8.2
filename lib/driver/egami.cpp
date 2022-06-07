@@ -24,7 +24,7 @@ eEGAMI *eEGAMI::getInstance()
 
 void eEGAMI::checkkernel(int mycheck)
 {
-	//int mycheck;
+	int mycheck = 0;
 	int kernel = 1234;
 	int test = 1234;
 
