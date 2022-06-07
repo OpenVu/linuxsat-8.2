@@ -22,19 +22,19 @@ eEGAMI *eEGAMI::getInstance()
 	return instance;
 }	
 
-void eEGAMI::checkkernel(int mycheck)
+void eEGAMI::checkkernel()
 {
-	int mycheck = 0;
+	//int mycheck = 0;
 	int kernel = 1234;
 	int test = 1234;
 
 	//fd = open("/proc/stb/info/vumodel", O_WRONLY);
 	if (kernel == test)
 	{
-		mychecks = 1;
+		int mychecks = 1;
 	}
 	else
 	{
-		mychecks = 0;
+		int mychecks = 0;
 	}		
 }
