@@ -31,10 +31,10 @@ void eEGAMI::checkkernel(int mycheck)
 	//fd = open("/proc/stb/info/vumodel", O_WRONLY);
 	if (kernel == test)
 	{
-		mycheck = 1;
+		mychecks = 1;
 	}
 	else
 	{
-		mycheck = 0;
+		mychecks = 0;
 	}		
 }
